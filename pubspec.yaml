@@ -88,6 +88,14 @@ flutter:
     - assets/nearby.png
     - assets/grocery.png
     - assets/discount.png
+    - assets\notification_back.png
+    - assets\order_assigned.png
+    - assets\order_cancelled.png
+    - assets\order_delivered.png
+    - assets\out-of-stock 1.png
+    - assets\promotion_marketplace.png
+    - assets\promotion_notify.png
+    - assets\support_personnel.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
