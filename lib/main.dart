@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:machine_test_notifications/controller/bottom_nav_provider.dart';
+import 'package:machine_test_notifications/controller/notification_provider.dart';
 import 'package:machine_test_notifications/routes/routes.dart';
 import 'package:machine_test_notifications/views/screens/home/home_screen.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => BottomNavProvider()),
+        ChangeNotifierProvider(create: (_) => NotificationProvider()),
      
       ],
       child: MaterialApp(
