@@ -1,4 +1,3 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:machine_test_notifications/controller/bottom_nav_provider.dart';
 import 'package:machine_test_notifications/core/utils/connection_checker.dart';
@@ -10,13 +9,13 @@ import 'package:machine_test_notifications/views/widgets/nav_items.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends State<HomeScreen> {
   bool isConnected = true;
 
  @override
@@ -42,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Consumer<BottomNavProvider>(builder: (context, provider, child) {
         if (!isConnected) {
-          return Center(child: Text('No internet connection'));
+          return const Center(child: Text('No internet connection'));
         }
 
         switch (provider.selectedIndex) {
@@ -71,60 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
       );
     });
   }
-
 }
 
 
-
-
-
-
-
-
-
-
-
-
-// class HomeScreen extends StatelessWidget {
-//   const HomeScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: _body(),
-//       bottomNavigationBar: _bottomNav()
-//     );
-//   }
-// }
-
-// Widget _body() {
-//   return SafeArea(
-//     child: Consumer<BottomNavProvider>(
-//       builder: (context, provider, child) {
-//         switch (provider.selectedIndex) {
-//           case 0:
-//             return const HomeScreenContent();
-//           case 1:
-//             return const Cart();
-//           case 2:
-//             return const MyOrder();
-//           case 3:
-//             return const Account();
-//           default:
-//             return const HomeScreenContent();
-//         }
-//       },
-//     ),
-//   );
-// }
-
-// Widget _bottomNav() {
-//   return Consumer<BottomNavProvider>(builder: (context, provider, child) {
-//     return NavItems(
-//       currentIndex: provider.selectedIndex,
-//       onTap: (index) {
-//         provider.updateIndex(index);
-//       },
-//     );
-//   });
-// }
