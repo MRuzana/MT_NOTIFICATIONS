@@ -46,11 +46,6 @@ static Future<void> _fetchNotificationsInIsolate(SendPort sendPort) async {
 }
 
 
-
-
-
-
-
 // class ApiService {
 //   Future<List<NotificationModel>> fetchNotifications()async{
 
