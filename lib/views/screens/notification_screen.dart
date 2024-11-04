@@ -19,6 +19,8 @@ class NotificationScreen extends StatelessWidget {
   }
 }
 
+//List all notifications
+
 class NotificationListview extends StatelessWidget {
   const NotificationListview({super.key});
 

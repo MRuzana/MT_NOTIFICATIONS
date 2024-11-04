@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:machine_test_notifications/core/constatnts/width_height.dart';
-import 'package:machine_test_notifications/views/styles/text_style.dart';
+import 'package:machine_test_notifications/views/widgets/all_store_button.dart';
 import 'package:machine_test_notifications/views/widgets/craze_deals.dart';
 import 'package:machine_test_notifications/views/widgets/location_widget.dart';
 import 'package:machine_test_notifications/views/widgets/near_stores.dart';
@@ -21,6 +21,9 @@ class HomeScreenContent extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: const [
+
+            //Home screen contents
+
             kHeight10,
             TodaysLikes(),
             TopPicks(),
@@ -36,32 +39,7 @@ class HomeScreenContent extends StatelessWidget {
   }
 }
 
-class AllStoreButton extends StatelessWidget {
-  const AllStoreButton({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: padding15,
-      child: Center(
-        child: Container(
-          height: 40,
-          width: 240,
-          decoration: BoxDecoration(
-              color: const Color(0xFF29D177),
-              borderRadius: BorderRadius.circular(10)),
-          child: Center(
-            child: Text('View all stores',
-                style: customTextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500)),
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 Widget _appBar(BuildContext context) {
   return AppBar(
@@ -81,3 +59,6 @@ Widget _appBar(BuildContext context) {
     ),
   );
 }
+
+
+
